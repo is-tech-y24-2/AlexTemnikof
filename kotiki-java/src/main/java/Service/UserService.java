@@ -60,6 +60,11 @@ public class UserService {
         catDao.delete(cat);
     }
 
+    public void deletePersonById(int personId){
+        Person person = findPersonById(personId);
+        personDao.delete(person);
+    }
+
 
     public Cat findCatById(int id){
 

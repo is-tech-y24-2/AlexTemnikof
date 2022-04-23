@@ -1,28 +1,36 @@
 package Controller;
 
+import Dao.Entities.*;
+import Dao.RelationClasses.PersonToCat;
+import Service.UserService;
+
+import java.util.List;
+
 public class PersonController {
 
-    public void registerNewPerson(){
+    UserService service = new UserService();
 
+    public Person registerNewPerson(String name, String birthday){
+        return service.registerNewPerson(name, birthday);
     }
 
-    public void registerOwnership(){
-
+    public PersonToCat registerOwnership(int personId, int catId){
+        return service.registerTheOwnership(personId, catId);
     }
 
-    public void deleteOwnerShip(){
-
+    public void deleteOwnerShipById(int id){
+        service.deleteTheOwnerShipById(id);
     }
 
-    public void findPersonById(){
-
+    public void findPersonById(int id){
+        service.findPersonById(id);
     }
 
-    public void deletePersonById(){
-
+    public void deletePersonById(int id){
+        service.deletePersonById(id);
     }
 
-    public void getAllPersons(){
-
+    public List<Person> getAllPersons(){
+        return service.getAllPersons();
     }
 }

@@ -1,25 +1,33 @@
 package Controller;
 
+import Dao.Entities.Cat;
+import Dao.Enums.*;
+import Service.UserService;
+
+import java.util.*;
+
 public class CatController {
 
-    public void registerCat(){
+    UserService service = new UserService();
 
+    public void registerCat(String name, Breed breed, Color color){
+        service.registerCat(name, breed.ordinal(), color.ordinal());
     }
 
-    public void deleteCatById(){
-
+    public void deleteCatById(int id){
+        service.deleteTheCatById(id);
     }
 
-    public void findCatById(){
-
+    public Cat findCatById(int id){
+        return service.findCatById(id);
     }
 
-    public void getAllCats(){
-
+    public List<Cat> getAllCats(){
+        return service.getAllCats();
     }
 
-    public void getFriendsOfTheCat(){
-
+    public List<Cat> getFriendsOfTheCat(int id){
+        return service.getAllFriendsOfTheCatById(id);
     }
 
 
