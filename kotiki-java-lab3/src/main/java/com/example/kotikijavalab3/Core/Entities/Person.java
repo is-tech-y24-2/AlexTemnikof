@@ -1,7 +1,5 @@
 package com.example.kotikijavalab3.Core.Entities;
 
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 
 @Entity

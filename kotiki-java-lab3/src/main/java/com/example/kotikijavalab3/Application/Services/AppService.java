@@ -13,9 +13,7 @@ import com.example.kotikijavalab3.DTO.*;
 import com.example.kotikijavalab3.Service.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -112,21 +110,41 @@ public class AppService implements IAppService {
         return tempArr;
     }
 
-    public List<PersonToCat> getAllOwnerships(){
-        return personToCatRepository.findAll();
+    public List<PersonToCatDTO> getAllOwnerships(){
+        List<PersonToCat> list = personToCatRepository.findAll();
+        List<PersonToCatDTO> tempList = new ArrayList<>();
+        for (PersonToCat personToCat : list){
+            tempList.add(DTOTransferService.personToCatDTOTransfer(personToCat));
+        }
+        return tempList;
     }
 
-    public List<CatToCat> getAllFriendships(){
-        return catToCatRepository.findAll();
+    public List<CatToCatDTO> getAllFriendships(){
+        List<CatToCat> list = catToCatRepository.findAll();
+        List<CatToCatDTO> tempList = new ArrayList<>();
+        for (CatToCat catToCat : list){
+            tempList.add(DTOTransferService.catToCatDTOTransfer(catToCat));
+        }
+        return tempList;
     }
 
-    public List<Cat> getAllCats(){
+    public List<CatDTO> getAllCats(){
 
-        return catRepository.findAll();
+        List<Cat> list = catRepository.findAll();
+        List<CatDTO> tempList = new ArrayList<>();
+        for (Cat cat : list){
+            tempList.add(DTOTransferService.catDTOTransfer(cat));
+        }
+        return tempList;
     }
 
-    public List<Person> getAllPersons(){
+    public List<PersonDTO> getAllPersons(){
 
-        return personRepository.findAll();
+        List<Person> list = personRepository.findAll();
+        List<PersonDTO> tempList = new ArrayList<>();
+        for (Person person : list){
+            tempList.add(DTOTransferService.personDTOTransfer(person));
+        }
+        return tempList;
     }
 }

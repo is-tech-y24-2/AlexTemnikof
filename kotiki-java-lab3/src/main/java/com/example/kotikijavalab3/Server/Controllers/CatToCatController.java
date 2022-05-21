@@ -1,7 +1,6 @@
 package com.example.kotikijavalab3.Server.Controllers;
 
 import com.example.kotikijavalab3.Application.Services.AppService;
-import com.example.kotikijavalab3.Core.RelationEntities.CatToCat;
 import com.example.kotikijavalab3.DTO.CatDTO;
 import com.example.kotikijavalab3.DTO.CatToCatDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +29,7 @@ public class CatToCatController {
 
     @GetMapping("/getallfriendships")
     @ResponseBody
-    public List<CatToCat> getAllFriendships(){
+    public List<CatToCatDTO> getAllFriendships(){
         return service.getAllFriendships();
     }
 

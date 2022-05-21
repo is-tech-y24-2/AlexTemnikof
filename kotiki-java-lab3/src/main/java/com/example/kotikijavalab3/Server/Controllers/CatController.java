@@ -2,7 +2,6 @@ package com.example.kotikijavalab3.Server.Controllers;
 
 
 import com.example.kotikijavalab3.Application.Services.AppService;
-import com.example.kotikijavalab3.Core.Entities.Cat;
 import com.example.kotikijavalab3.DTO.CatDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,11 +29,11 @@ public class CatController {
 
     @GetMapping(value="/getallcats")
     @ResponseBody
-    public List<Cat> getAllCats(){
+    public List<CatDTO> getAllCats(){
         return appService.getAllCats();
     }
 
-    @DeleteMapping("/deleteCatById")
+    @DeleteMapping("/deletecatbyid")
     @ResponseBody
     public String deleteCatById(Integer id){
         appService.deleteTheCatById(id);

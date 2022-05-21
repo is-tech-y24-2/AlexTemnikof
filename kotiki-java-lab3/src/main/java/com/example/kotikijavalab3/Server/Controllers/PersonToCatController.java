@@ -1,7 +1,6 @@
 package com.example.kotikijavalab3.Server.Controllers;
 
 import com.example.kotikijavalab3.Application.Services.AppService;
-import com.example.kotikijavalab3.Core.RelationEntities.PersonToCat;
 import com.example.kotikijavalab3.DTO.CatDTO;
 import com.example.kotikijavalab3.DTO.PersonToCatDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +29,7 @@ public class PersonToCatController {
 
     @GetMapping("/getallownerships")
     @ResponseBody
-    public List<PersonToCat> getAllOwnerShips(){
+    public List<PersonToCatDTO> getAllOwnerShips(){
         return service.getAllOwnerships();
     }
 

@@ -2,7 +2,6 @@ package com.example.kotikijavalab3.Core.Entities;
 
 import com.example.kotikijavalab3.Core.Enums.Breed;
 import com.example.kotikijavalab3.Core.Enums.Color;
-
 import javax.persistence.*;
 
 @Entity

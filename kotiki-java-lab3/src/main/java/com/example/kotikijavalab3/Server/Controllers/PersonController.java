@@ -1,7 +1,6 @@
 package com.example.kotikijavalab3.Server.Controllers;
 
 import com.example.kotikijavalab3.Application.Services.AppService;
-import com.example.kotikijavalab3.Core.Entities.Person;
 import com.example.kotikijavalab3.DTO.PersonDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +28,7 @@ public class PersonController {
 
     @GetMapping("/getallpersons")
     @ResponseBody
-    public List<Person> getAllPersons(){
+    public List<PersonDTO> getAllPersons(){
         return service.getAllPersons();
     }
 

@@ -1,9 +1,5 @@
 package com.example.kotikijavalab3.Application.IServices;
 
-import com.example.kotikijavalab3.Core.Entities.Cat;
-import com.example.kotikijavalab3.Core.Entities.Person;
-import com.example.kotikijavalab3.Core.RelationEntities.CatToCat;
-import com.example.kotikijavalab3.Core.RelationEntities.PersonToCat;
 import com.example.kotikijavalab3.DTO.CatDTO;
 import com.example.kotikijavalab3.DTO.CatToCatDTO;
 import com.example.kotikijavalab3.DTO.PersonDTO;
@@ -28,8 +24,8 @@ public interface IAppService {
     PersonToCatDTO findOwnershipById(int id);
     List<CatDTO> getAllCatsOfThePersonById(int id);
     List<CatDTO> getAllFriendsOfTheCatById(int id);
-    List<PersonToCat> getAllOwnerships();
-    List<CatToCat> getAllFriendships();
-    List<Cat> getAllCats();
-    List<Person> getAllPersons();
+    List<PersonToCatDTO> getAllOwnerships();
+    List<CatToCatDTO> getAllFriendships();
+    List<CatDTO> getAllCats();
+    List<PersonDTO> getAllPersons();
 }
