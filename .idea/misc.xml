@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/kotiki-java" />
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">
